@@ -78,6 +78,10 @@ ggplot(fig1, aes(x = Test, y = Correct, color = Student, group = Student)) +
   theme_classic()
 dev.off()
 
+# Compute dissimilarity matrix
+get_dist(fig1.w, method = "euclidean")
+get_dist(fig1.w, method = "pearson")
+
 # Delete unnecessary objects for next code (to prevent environment from being bogged down or overcrowded):
 rm(list=setdiff(ls(), c("ICI.s","CALC_REPS")))
 
